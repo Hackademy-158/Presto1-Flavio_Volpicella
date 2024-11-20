@@ -1,0 +1,133 @@
+:root{
+    --lightblue : #00d1f9;
+    --darkblue :  #001442;
+    --mywhite : #fff;
+    
+}
+
+@font-face {
+    font-family: Popcat;
+    src: url(../media/Popcat.otf);
+}
+
+@font-face {
+    font-family: Elegant;
+    src: url(../media/ELEGANT\ TYPEWRITER\ Bold.ttf);
+}
+@font-face {
+    font-family: Supershiny;
+    src: url(../media/Super\ Shiny.ttf);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Popcat;
+}
+
+*{
+    font-family: Supershiny;
+    
+}
+
+.font-Popcat{
+    font-family:Popcat ;
+}
+
+.font-Elegant{
+    font-family:Elegant ;
+}
+.font-Blacklist{
+    font-family:Blacklisted ;
+}
+
+
+.text-lightblue{
+    color: var(--lightblue);
+}
+.text-white{
+    color: var(--mywhite);
+}
+.text-darkblue{
+    color: var(--darkblue);
+}
+
+.bg-darkblue{
+    background-color: var(--darkblue);
+}
+
+.bg-white{
+    background-color: var(--mywhite);
+}
+
+/* inizio navbar */
+.img-logo{
+    width: 60px;
+}
+.search{
+    cursor: pointer;
+}
+
+.btn-outline-success {
+    --bs-btn-border-color: #00d1f9;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #001442 ;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #001442 ;
+    --bs-btn-active-border-color: #001442;
+    --bs-btn-disabled-color:#00d1f9 ;
+    --bs-btn-disabled-border-color:#001442 ;
+    background-color: var(--lightblue);
+}
+
+.navbarBtn {
+    color:#fff ;
+    background-color: #00d1f9;
+    border: #00d1f9;
+}
+.navbarBtn:hover{
+    border-color: #00d1f9;
+    color: #fff;
+    background:#001442 ;
+    border-color: #fff; 
+}
+.navbarBtn:active{
+    color: #fff;
+    background: #001442 ;
+    border-color: #001442;
+}
+
+.navbarBtn:disabled{
+    color:#00d1f9 ;
+    border-color:#001442
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--lightblue);
+}
+
+.navbar-nav {
+    --bs-nav-link-hover-color: #00d1f9;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-hover-bg: var(--lightblue);
+    font-size: 25px;
+}
+.number{
+    font-size: 25px;
+    padding-top: 7px;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+
+.nav-link{
+    color: var(--darkblue);
+}
+
+
+
+
+
