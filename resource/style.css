@@ -59,6 +59,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--mywhite);
 }
 
+/* body{
+    background-image: url(../media/carousel-1.jpg);
+    background-size: cover;
+    height: 100vh;
+} */
+
 /* inizio navbar */
 .img-logo{
     width: 60px;
@@ -125,6 +131,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link{
     color: var(--darkblue);
+}
+
+.img{
+    width: 100%;
+    
+}
+/* fine navbar */
+
+/* header */
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    
+}
+.header{ 
+    background: url(../media/carousel-1.jpg), linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+}
+.cardsHeader{
+    margin-top: 300px;
 }
 
 
