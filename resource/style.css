@@ -141,19 +141,12 @@ height: 100vh;
 
 /* header */
 
-.row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: 0px;
-    padding-left: 0px;
-    
-}
+
 .header{ 
     background: url(../media/carousel-1.jpg), linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
 }
 .cardsHeader{
