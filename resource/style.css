@@ -60,9 +60,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* body{
-    background-image: url(../media/carousel-1.jpg);
-    background-size: cover;
-    height: 100vh;
+background-image: url(../media/carousel-1.jpg);
+background-size: cover;
+height: 100vh;
 } */
 
 /* inizio navbar */
@@ -158,8 +158,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cardsHeader{
     margin-top: 300px;
+    font-size: 30px;
 }
 
+.loremText{
+    font-size: 25px;
+}
+
+.alwaysText{
+    font-size: 60px;
+}
+
+
+
+.healthyText{
+    font-size: 60px;
+}
+
+.btnOrder{
+    padding-right: 250px;
+    ;
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
