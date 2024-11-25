@@ -245,6 +245,19 @@ padding: 5px;
 }
 
 
+/* header articoli */
+.imgAnnunci{
+    background-image: url(../media/blog-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    
+}
+
+.titleArt{
+    text-shadow: 5px 3px 8px #00d1f9;
+}
 
 
 

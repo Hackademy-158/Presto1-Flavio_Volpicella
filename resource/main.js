@@ -12,7 +12,7 @@ window.addEventListener('scroll', ()=>{
         containerNavbar.classList.add('container', 'sticky-top' , 'rounded-3')
         containerNavbar.style.backgroundColor = 'var(--darkblue)'
     } else {
-        containerNavbar.classList.add('my-border' , 'container-fluid ')
+        containerNavbar.classList.add('my-border' , 'container-fluid')
         containerNavbar.classList.remove('container','sticky-top' , 'rounded-3')
         containerNavbar.style.backgroundColor = 'unset'
     }
