@@ -9,7 +9,7 @@ fetch('../annunci.json')
     
     
     
-    
+    // categorie
     function setCategory() {
         let uniche = []
         data.forEach(annuncio => {
@@ -31,8 +31,10 @@ fetch('../annunci.json')
         
     }
     
-    function createCards() {
-        data.forEach((annuncio=>{
+    // cards
+    function createCards(array) {
+        cardsWrapper.innerHTML = ''
+        array.forEach((annuncio=>{
             let div = document.createElement('div')
             div.classList.add('col-6', 'col-md-3', 'p-2')
             div.innerHTML = `
@@ -50,14 +52,33 @@ fetch('../annunci.json')
         }))
     }
     
+    // filtri
+    function filterByCategory(categoria) {
+        if (categoria=="all") {
+            createCards(data)
+        }else{
+            let filtered = data.filter((annuncio)=>annuncio.categoria==categoria)
+            createCards(filtered)
+            
+        }
+        
+    }
+    
     
     
     
     
     
     setCategory()
-    createCards()
+    createCards(data)
     
-    
-    
+    let radioCategory = document.querySelectorAll('.form-check-input')
+    radioCategory.forEach((radioButton)=>{
+        radioButton.addEventListener('click', ()=>{
+            console.log(radioButton.id);
+            let categoria = radioButton.id
+            filterByCategory(categoria)
+            
+        })
+    })
 })
