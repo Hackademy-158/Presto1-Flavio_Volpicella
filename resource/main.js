@@ -46,15 +46,18 @@ function incremento(elemento, num, tempo) {
 // incremento(fourthNumber,17,100)
 
 let check = false;
-let observ = new IntersectionObserver((entries) =>{
-    entries.forEach(entry=>{
-        if (entry.isIntersecting==true && check == false) {
-            incremento(firstNumber,456,10)
-            incremento(secondNumber,513,10)
-            incremento(thirdNumber,53,100)
-            incremento(fourthNumber,17,300)
-            check = true
-        }
+if (firstNumber) {
+    let observ = new IntersectionObserver((entries) =>{
+        entries.forEach(entry=>{
+            if (entry.isIntersecting==true && check == false) {
+                incremento(firstNumber,456,10)
+                incremento(secondNumber,513,10)
+                incremento(thirdNumber,53,100)
+                incremento(fourthNumber,17,300)
+                check = true
+            }
+        })
     })
-})
-observ.observe(thirdNumber)
+    observ.observe(thirdNumber)
+}
+    
