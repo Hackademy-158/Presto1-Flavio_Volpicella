@@ -5,8 +5,9 @@ fetch('../annunci.json')
     
     let radioWrapper = document.querySelector('#radioWrapper')
     let cardsWrapper = document.querySelector('#cardsWrapper')
-    
-    
+    let inputRange = document.querySelector('#inputRange')
+    let numberPrice = document.querySelector('#numberPrice')
+    let wordInput = document.querySelector('#wordInput')
     
     
     // categorie
@@ -81,4 +82,48 @@ fetch('../annunci.json')
             
         })
     })
+    
+
+
+    function filterPrice() {
+        let prezzo = data.map((annuncio)=>Number(annuncio.prezzo))
+        prezzo.sort( (a,b)=> a-b )
+        let maxPrezzo = prezzo.pop()
+
+        inputRange.max = maxPrezzo
+        inputRange.value = maxPrezzo
+        numberPrice.innerHTML = `${maxPrezzo} €`
+        
+
+    }
+    filterPrice()
+
+
+    function filterByPrice(numero){
+        let filtered = data.filter(annuncio=> Number(annuncio.prezzo) <= Number(numero))
+        
+        createCards(filtered);
+    }
+
+    inputRange.addEventListener( 'input', ()=>{
+        filterByPrice(inputRange.value)
+        numberPrice.innerHTML = `${inputRange.value} €`
+    } )
+
+    function filterByWord(word){
+        let filtered = data.filter(annuncio=> annuncio.nome.toLowerCase().includes(word.toLowerCase()))
+        createCards(filtered);
+        console.log(filtered);
+        
+    }
+
+    wordInput.addEventListener( 'input', ()=>{
+        setTimeout(()=>{
+            filterByWord(wordInput.value)
+        }, 1000)
+    })
+
 })
+
+
+
