@@ -12,7 +12,7 @@ window.addEventListener('scroll', ()=>{
         containerNavbar.classList.add('container', 'sticky-top' , 'rounded-3')
         containerNavbar.style.backgroundColor = 'var(--darkblue)'
     } else {
-        containerNavbar.classList.add('my-border' , 'container-fluid')
+        containerNavbar.classList.add('my-border' , 'container-fluid ')
         containerNavbar.classList.remove('container','sticky-top' , 'rounded-3')
         containerNavbar.style.backgroundColor = 'unset'
     }
@@ -30,17 +30,31 @@ function incremento(elemento, num, tempo) {
     let interval = setInterval(()=>{
         if (counter<num) {
             counter++;
-            elemento.innerHtml = counter
+            elemento.innerHTML = counter
         }else{
             clearInterval(interval);
         }
     },tempo)
 }
-        
-        
 
 
-incremento(firstNumber,456,100)
-incremento(secondNumber,513,100)
-incremento(thirdNumber,53,100)
-incremento(fourthNumber,17,100)
+
+
+// incremento(firstNumber,456,10)
+// incremento(secondNumber,513,10)
+// incremento(thirdNumber,53,100)
+// incremento(fourthNumber,17,100)
+
+let check = false;
+let observ = new IntersectionObserver((entries) =>{
+    entries.forEach(entry=>{
+        if (entry.isIntersecting==true && check == false) {
+            incremento(firstNumber,456,10)
+            incremento(secondNumber,513,10)
+            incremento(thirdNumber,53,100)
+            incremento(fourthNumber,17,300)
+            check = true
+        }
+    })
+})
+observ.observe(thirdNumber)
