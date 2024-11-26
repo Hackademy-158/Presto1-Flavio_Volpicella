@@ -159,13 +159,14 @@ height: 100vh;
 
 
 .header{ 
-    background: url(../media/carousel-1.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgba(0, 242, 255, 0.399), rgba(255, 255, 255, 0)), url(../media/carousel-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
     background-size: cover;
     
 }
+
 .cardsHeader{
     margin-top: 300px;
     font-size: 30px;
@@ -191,8 +192,8 @@ height: 100vh;
 }
 
 .btnOrder{
-border: 0px;
-padding: 5px;
+    border: 0px;
+    padding: 5px;
 }
 .btnOrder:hover{
     border-color: #00d1f9;
@@ -212,8 +213,8 @@ padding: 5px;
 }
 
 .btnFree{
-border: 0px;
-padding: 5px;
+    border: 0px;
+    padding: 5px;
 }
 .btnFree:hover{
     border-color: #00d1f9;
@@ -224,6 +225,8 @@ padding: 5px;
 
 
 /* sezione carosello */
+
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -247,8 +250,9 @@ padding: 5px;
 
 
 /* header articoli */
+
 .imgAnnunci{
-    background-image: url(../media/blog-1.jpg);
+    background-image: linear-gradient(rgba(0, 242, 255, 0.399), rgba(255, 255, 255, 0)), url(../media/blog-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -284,6 +288,84 @@ padding: 5px;
 .btn-primary:disabled{
     color:#00d1f9 ;
     border-color:#001442
+}
+
+
+.titoloArt{
+    text-shadow: 5px 3px 8px #00d1f9;
+}
+
+.titoloAnn{
+    text-shadow: 5px 3px 8px #00d1f9;
+}
+
+.card-title {
+    color: var(--darkblue);
+    text-shadow: 5px 3px 8px #00d1f9;
+}
+
+.card-text{
+    color: var(--lightblue);
+    text-shadow: 5px 3px 3px #0014423b;
+    font-size: 25px;
+}
+
+.card {
+    box-shadow: 14px 30px 36px 4px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 14px 30px 36px 4px rgba(0,0,0,0.76);
+    -moz-box-shadow: 14px 30px 36px 4px rgba(0,0,0,0.60);
+    transition: 1s;
+}
+.card:hover{
+    scale: 1.05;
+    display: flexbox;
+    cursor: pointer;
+}
+
+
+.btnAccordion{
+    color:#fff ;
+    background-color: #00d1f9;
+    border: #00d1f9;
+    font-size: 21px;
+}
+
+.btnAccordion:hover{
+    border-color: #00d1f9;
+    color: #fff;
+    background:#001442 ;
+    border-color: #fff; 
+}
+.btnAccordion:active{
+    color: #fff;
+    background: #001442 ;
+    border-color: #001442;
+}
+
+.btnAccordion:disabled{
+    color:#00d1f9 ;
+    border-color:#001442
+}
+
+
+/* sezione video */
+.titoloVideo{
+    text-shadow: 5px 3px 8px #00d1f9;
+}
+.pVideo{
+    font-size: 20px;
+}
+
+.tVideo{
+    font-size: 40px;
+}
+
+/* ultimi annunci */
+.contenitoreCard2{
+    height: 600px;
+}
+.cardart{
+    text-shadow: 5px 3px 8px #00d1f9
 }
 
 

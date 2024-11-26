@@ -27,22 +27,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav  ms-auto ">
                     <li class="nav-item pt-3 ">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../view/index.html">Home</a>
                     </li>
                     <li class="nav-item  pt-3 ">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" >Link</a>
                     </li>
                     <li class="nav-item  pt-3  dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item " href="#">Another action</a></li>
+                            <li><a class="dropdown-item " >Action</a></li>
+                            <li><a class="dropdown-item " >Another action</a></li>
                             
                         </ul>
                         <li class="nav-item  pt-3">
-                            <a class="nav-link" href="#">Contact:</a>
+                            <a class="nav-link" >Contact:</a>
                         </li>
                     </li>
                     <li class="nav-item  pt-3">
@@ -59,8 +59,8 @@
         </div>
         <!-- Fine navbar -->
         <!-- header -->
-        <div class="container-fluid">
-            <div class="row imgAnnunci">
+        <div class="container-fluid imgAnnunci">
+            <div class="row ">
                 <div class="col-12 d-flex justify-content-center pt-5">
                     <h1 class="display-2 text-darkblue titleArt">Acquista QUI</h1>
                 </div>
@@ -69,11 +69,11 @@
         <!-- fine header  -->
         
         <!-- sezione annunci -->
-        <section class="container-fluid vh-100">
+        <section class="container-fluid vh-100 contenitoreCards ">
             <div class="row">
                 <div class="col-12 col-md-3 mt-5">
                     <div class="accordion" id="accordionExample">
-                        <h3 class="text-main mb-5">Ordina per:</h3>
+                        <h3 class="titoloArt text-darkblue mb-5">Ordina per:</h3>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -99,7 +99,7 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <input type="range" class="form-range" id="inputRange">
+                                    <input type="range" class="form-range" min="0" max="100" step="0.5" value="100" id="inputRange">
                                     <p id="numberPrice"> 0 €</p>
                                 </div>
                             </div>
@@ -119,9 +119,10 @@
                             </div>
                         </div>
                     </div>
+                    <button class="my-3 btnAccordion rounded-2 px-2" id="btnReset">Reset</button>
                 </div>
                 <div class="col-12 col-md-9 px-5 mt-5">
-                    <h3 class="text-main" >Annunci:</h3>
+                    <h3 class="titoloAnn text-darkblue" >Annunci:</h3>
                     <div class="row" id="cardsWrapper">
                         <!-- <div class="col-6 col-md-3 p-2">
                             <div class="card" style="width: 18rem;">

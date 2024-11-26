@@ -62,5 +62,32 @@ if (firstNumber) {
 }
 
 
+fetch('../annunci.json')
+.then(response=>response.json())
+.then(data=>{
+    console.log(data);
+let latestWrapper = document.querySelector('#latestWrapper')
+        function createLatestCards(array) {
+            array.forEach((annuncio, index)=>{
+                if (index>=array.length -3) {
+                    let div = document.createElement('div')
+                    div.classList.add('col-12', 'col-md-4')
+                    div.innerHTML = `
+                    <div class="card" style="width: 18rem;">
+                        <img src="../media/blog-2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">${annuncio.nome}</h5>
+                        <p class="card-text">${annuncio.categoria}</p>
+                        <p>${annuncio.prezzo} €</p>
+                        <a href="#" class="btn btn-primary">Acquista</a>
+                        </div>
+                    </div>
+                    `
+                    latestWrapper.appendChild(div)
+                }
 
+            })
+        }
+        createLatestCards(data)
 
+    })
